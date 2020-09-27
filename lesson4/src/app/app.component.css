@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+
+}
+
+.left {
+  width: 600px;
+}
+
+.right {
+  background-color: aqua;
+}
