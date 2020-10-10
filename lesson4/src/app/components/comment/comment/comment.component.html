@@ -1,0 +1,16 @@
+<div>
+  id comment: {{comm.id}}
+</div>
+<div>
+  id user: {{comm.userId}}
+</div>
+<div>
+  title: {{comm.title}}
+</div>
+<div>
+  comment: {{comm.body}}
+</div>
+<button (click)="getInfoComment(comm.id)">info</button>
+<hr>
+
+<router-outlet></router-outlet>

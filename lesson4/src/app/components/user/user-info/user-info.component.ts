@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {UserService} from "../../../services/user.service";
 import {User} from "../../../models/user";
 
 @Component({
@@ -9,12 +8,12 @@ import {User} from "../../../models/user";
   styleUrls: ['./user-info.component.css']
 })
 export class UserInfoComponent implements OnInit {
-  userInfo: any = {}
+  userInfo: User;
 
-  constructor(private activatedRoute: ActivatedRoute, private userServices: UserService) {
-    this.activatedRoute.params
-      .subscribe(params => this.userServices.getUserById(params.id)
-        .subscribe(data => this.userInfo = data));
+  constructor(private router: Router,
+              private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.params.subscribe(() =>
+    this.userInfo = this.router.getCurrentNavigation().extras.state.user);
   }
 
   ngOnInit(): void {

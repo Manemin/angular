@@ -9,6 +9,11 @@ import {HttpClientModule} from "@angular/common/http";
 import { UserInfoComponent } from './components/user/user-info/user-info.component';
 import { AllPostsComponent } from './components/post/all-posts/all-posts.component';
 import { PostComponent } from './components/post/post/post.component';
+import { AllCommentsComponent } from './components/comment/all-comments/all-comments.component';
+import { CommentComponent } from './components/comment/comment/comment.component';
+import { PostInfoComponent } from './components/post/post-info/post-info.component';
+import { CommentInfoComponent } from './components/comment/comment-info/comment-info.component';
+import { PostsUserComponent } from './components/post/posts-user/posts-user.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +23,11 @@ import { PostComponent } from './components/post/post/post.component';
     UserInfoComponent,
     AllPostsComponent,
     PostComponent,
+    AllCommentsComponent,
+    CommentComponent,
+    PostInfoComponent,
+    CommentInfoComponent,
+    PostsUserComponent,
   ],
   imports: [
     BrowserModule,
