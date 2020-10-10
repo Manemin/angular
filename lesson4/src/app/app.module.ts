@@ -16,25 +16,28 @@ import { CommentInfoComponent } from './components/comment/comment-info/comment-
 import { PostsUserComponent } from './components/post/posts-user/posts-user.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AllUsersComponent,
-    UserComponent,
-    UserInfoComponent,
-    AllPostsComponent,
-    PostComponent,
-    AllCommentsComponent,
-    CommentComponent,
-    PostInfoComponent,
-    CommentInfoComponent,
-    PostsUserComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        AllUsersComponent,
+        UserComponent,
+        UserInfoComponent,
+        AllPostsComponent,
+        PostComponent,
+        AllCommentsComponent,
+        CommentComponent,
+        PostInfoComponent,
+        CommentInfoComponent,
+        PostsUserComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+    ],
+    providers: [],
+    exports: [
+        UserComponent
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
