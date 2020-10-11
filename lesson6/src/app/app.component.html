@@ -1,0 +1,28 @@
+<select [(ngModel)]="userId">
+  <option *ngFor="let usr of users" [value]="usr.id">{{usr.name}}</option>
+</select>
+
+<br>
+<button (click)="withdrawUser(userId)">Show User Info</button>
+<button (click)="getPostsById(userId)">Show User posts</button>
+<div class="container">
+  <div class="left">
+    <p>id:  {{user?.id}}</p>
+    <p>Name:  {{user?.name}}</p>
+    <p>Username:  {{user?.username}}</p>
+    <p>Email:  {{user?.email}}</p>
+    <p>Phone:  {{user?.phone}}</p>
+  </div>
+  <div>
+    <div *ngFor="let post of posts" class="right">
+      <hr>
+      <p>user id:   {{post.userId}}</p>
+      <p>post id:   {{post.id}}</p>
+      <p>post title:  {{post.title}}</p>
+      <p>body:  {{post.body}}</p>
+      <hr>
+    </div>
+  </div>
+</div>
+
+
