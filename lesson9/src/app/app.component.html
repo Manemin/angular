@@ -4,12 +4,15 @@
     <option *ngFor="let user of users" [value]="user.id">{{user.name}}</option>
   </select>
 </form>
+<h2>User info</h2>
 <div id="usr">
   <p>{{user?.username}}</p>
   <p>{{user?.email}}</p>
   <p>{{user?.phone}}</p>
 </div>
 <button (click)="postUser()">click</button>
+<hr>
+<h2>User post</h2>
 <hr>
 <div *ngFor="let p of post">
   <p>{{p.title}}</p>
