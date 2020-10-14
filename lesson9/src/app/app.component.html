@@ -1,0 +1,18 @@
+<form [formGroup]="form" (click)="userById()">
+  <select [formControl]="selectedUser">
+    <option hidden selected>Select User</option>
+    <option *ngFor="let user of users" [value]="user.id">{{user.name}}</option>
+  </select>
+</form>
+<div id="usr">
+  <p>{{user?.username}}</p>
+  <p>{{user?.email}}</p>
+  <p>{{user?.phone}}</p>
+</div>
+<button (click)="postUser()">click</button>
+<hr>
+<div *ngFor="let p of post">
+  <p>{{p.title}}</p>
+  <p>{{p.body}}</p>
+  <hr>
+</div>
